@@ -10,13 +10,13 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController {
-    let eggTime : [String: Int] = ["Soft": 5, "Medium": 7, "Hard": 12]
-    var timer = Timer()
-    var secondsRemaining = 60
-    var hardness = ""
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    
+    let eggTime : [String: Int] = ["Soft": 360, "Medium": 420, "Hard": 600]
+    var timer = Timer()
+    var secondsRemaining = 0
+    var hardness = ""
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
         timer.invalidate()
